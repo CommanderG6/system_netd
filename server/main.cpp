@@ -127,7 +127,7 @@ int main() {
     DnsProxyListener dpl(&gCtls->netCtrl, &gCtls->eventReporter);
     if (dpl.startListener()) {
         ALOGE("Unable to start DnsProxyListener (%s)", strerror(errno));
-        exit(1);
+        //exit(1);
     }
 
     MDnsSdListener mdnsl;
