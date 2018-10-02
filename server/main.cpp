@@ -105,7 +105,7 @@ int main() {
         ALOGE("Unable to start NetlinkManager (%s)", strerror(errno));
         exit(1);
     }
-
+#if 0
     std::unique_ptr<NFLogListener> logListener;
     {
         auto result = makeNFLogListener();
@@ -120,7 +120,7 @@ int main() {
             // We can still continue without wakeup packet logging.
         }
     }
-
+#endif
     // Set local DNS mode, to prevent bionic from proxying
     // back to this service, recursively.
     setenv("ANDROID_DNS_MODE", "local", 1);
