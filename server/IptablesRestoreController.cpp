@@ -208,7 +208,7 @@ int IptablesRestoreController::sendCommand(const IptablesProcessType type,
                                            std::string *output) {
    std::unique_ptr<IptablesProcess> *process =
            (type == IPTABLES_PROCESS) ? &mIpRestore : &mIp6Restore;
-
+   return 0;
 
     // We might need to fork a new process if we haven't forked one yet, or
     // if the forked process terminated.
